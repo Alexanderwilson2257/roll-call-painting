@@ -1,0 +1,466 @@
+/* =============================================
+   Roll Call Painting – styles.css
+   External Stylesheet
+   ============================================= */
+
+/* === 1. GLOBAL RESET & BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #222222;
+  background-color: #ffffff;
+}
+
+/* === 2. HEADER === */
+header {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 3px solid #cc0000;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.logo .tagline {
+  font-size: 0.8rem;
+  color: #aaaaaa;
+  letter-spacing: 0.5px;
+}
+
+/* === 3. NAVIGATION === */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+nav ul li a {
+  color: #dddddd;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #ffffff;
+  border-bottom: 2px solid #cc0000;
+}
+
+/* === 4. HERO SECTION === */
+.hero {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 96px 24px;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #ffffff;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  color: #cccccc;
+  margin-bottom: 32px;
+}
+
+/* === 5. BUTTONS === */
+.btn-primary {
+  display: inline-block;
+  background-color: #cc0000;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 14px 36px;
+  border-radius: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #aa0000;
+}
+
+.btn-secondary {
+  display: inline-block;
+  background-color: transparent;
+  color: #cc0000;
+  text-decoration: none;
+  padding: 12px 32px;
+  border: 2px solid #cc0000;
+  border-radius: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: #cc0000;
+  color: #ffffff;
+}
+
+/* === 6. SECTIONS (general) === */
+section {
+  padding: 64px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+
+.section-intro {
+  color: #555555;
+  margin-bottom: 40px;
+  max-width: 600px;
+}
+
+/* === 7. SERVICE CARDS === */
+.service-cards {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 220px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 28px 24px;
+  background-color: #fafafa;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555555;
+  margin-bottom: 16px;
+}
+
+.card a {
+  color: #cc0000;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* === 8. WHY US LIST === */
+.why-us {
+  background-color: #f5f5f5;
+  max-width: 100%;
+  padding: 64px 24px;
+}
+
+.why-us h2 {
+  max-width: 1100px;
+  margin: 0 auto 24px;
+  font-size: 2rem;
+}
+
+.reasons-list {
+  max-width: 1100px;
+  margin: 0 auto;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.reasons-list li {
+  padding: 16px 20px;
+  background-color: #ffffff;
+  border-left: 4px solid #cc0000;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #333333;
+}
+
+/* === 9. GALLERY GRID === */
+.gallery-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.gallery-grid figure {
+  flex: 1;
+  min-width: 200px;
+  background-color: #e8e8e8;
+  border-radius: 6px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-grid figcaption {
+  padding: 10px;
+  font-size: 0.85rem;
+  color: #666666;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* === 10. CTA SECTION === */
+.cta {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  text-align: center;
+  max-width: 100%;
+  padding: 72px 24px;
+}
+
+.cta h2 {
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.cta p {
+  color: #cccccc;
+  max-width: 600px;
+  margin: 0 auto 32px;
+}
+
+/* === 11. FOOTER === */
+footer {
+  background-color: #111111;
+  color: #cccccc;
+  padding: 48px 24px 0;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #333333;
+}
+
+footer h4 {
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  margin-bottom: 14px;
+  letter-spacing: 0.5px;
+}
+
+.footer-links ul,
+.footer-social ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+footer a {
+  color: #aaaaaa;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: #cc0000;
+}
+
+footer p {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+.footer-bottom {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #666666;
+}
+
+/* === 12. FORM STYLES === */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 560px;
+}
+
+form label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333333;
+  display: block;
+  margin-bottom: 4px;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: Georgia, serif;
+  color: #222222;
+  background-color: #fafafa;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #cc0000;
+  background-color: #ffffff;
+}
+
+form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+form button[type="submit"] {
+  background-color: #cc0000;
+  color: #ffffff;
+  border: none;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+form button[type="submit"]:hover {
+  background-color: #aa0000;
+}
+
+/* === 13. TABLE STYLES === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+  font-size: 0.95rem;
+}
+
+table th {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 12px 16px;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e0e0e0;
+  color: #333333;
+}
+
+table tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+table tr:hover {
+  background-color: #fff3f3;
+}
+
+/* === 14. IMAGES === */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* === 15. RESPONSIVE === */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .service-cards {
+    flex-direction: column;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 28px;
+  }
+}
